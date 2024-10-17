@@ -1,34 +1,38 @@
 <?php
+ob_start();
 include '../../../../analisis2_notas/includes/db.php';
 include '../../../../analisis2_notas/public/header.php';
 
-// Consulta para obtener todos los colegios
-$sql = "SELECT * FROM colegio";
+// Consulta para obtener todo el personal administrativo
+$sql = "SELECT * FROM personal_administrativo";
 $result = $conn->query($sql);
 ?>
-<h2>Lista de Colegios</h2>
-<a 
-    href="../../../../analisis2_notas/public/crud/colegio/create.php"
-    class="btn btn-primary mb-3"
->Añadir Colegio</a>
+<h2>Lista de Personal Administrativo</h2>
+<a href="create.php" class="btn btn-primary mb-3">Añadir Personal Administrativo</a>
 
 <table class="table table-striped table-bordered">
     <tr>
         <th>ID</th>
         <th>Nombre</th>
-        <th>Dirección</th>
+        <th>Apellido</th>
+        <th>Puesto</th>
+        <th>Teléfono</th>
+        <th>Email</th>
         <th>Acciones</th>
     </tr>
     <?php while ($row = $result->fetch_assoc()) { ?>
         <tr>
-            <td><?php echo $row['id_colegio']; ?></td>
+            <td><?php echo $row['id_personal']; ?></td>
             <td><?php echo $row['nombre']; ?></td>
-            <td><?php echo $row['direccion']; ?></td>
+            <td><?php echo $row['apellido']; ?></td>
+            <td><?php echo $row['puesto']; ?></td>
+            <td><?php echo $row['telefono']; ?></td>
+            <td><?php echo $row['email']; ?></td>
             <td>
-                <a href="edit.php?id=<?php echo $row['id_colegio']; ?>" class="btn btn-sm">
+                <a href="edit.php?id=<?php echo $row['id_personal']; ?>" class="btn btn-sm">
                     <img src="../../../../analisis2_notas/assets/img/editar.png" alt="Editar" style="width:30px; height:30px;">
                 </a>
-                <a href="javascript:void(0);" class="btn btn-sm" onclick="confirmDelete(<?php echo $row['id_colegio']; ?>)">
+                <a href="javascript:void(0);" class="btn btn-sm" onclick="confirmDelete(<?php echo $row['id_personal']; ?>)">
                     <img src="../../../../analisis2_notas/assets/img/eliminar.png" alt="Eliminar" style="width:30px; height:30px;">
                 </a>
             </td>
@@ -37,15 +41,12 @@ $result = $conn->query($sql);
 </table>
 
 <script>
-    function confirmDelete(id_colegio) {
-        // Utilizamos un diálogo simple de confirmación nativo de JavaScript
+    function confirmDelete(id_personal) {
         var confirmation = confirm("¿Estás seguro de que deseas eliminar este registro?");
         if (confirmation) {
-            // Redirigir al script de eliminación si se confirma
-            window.location.href = "delete.php?id=" + id_colegio;
+            window.location.href = "delete.php?id=" + id_personal;
         }
     }
 </script>
 
 <?php include '../../../../analisis2_notas/public/footer.php'; ?>
-
