@@ -1,6 +1,6 @@
 <?php
-include '../../../../analisis2/includes/db.php';
-include '../../../../analisis2/public/header.php';
+include '../../../../analisis2_notas/includes/db.php';
+include '../../../../analisis2_notas/public/header.php';
 
 // Consulta para obtener todos los colegios
 $sql = "SELECT * FROM colegio";
@@ -8,7 +8,7 @@ $result = $conn->query($sql);
 ?>
 <h2>Lista de Colegios</h2>
 <a 
-    href="../../../../analisis2/public/crud/colegio/create.php"
+    href="../../../../analisis2_notas/public/crud/colegio/create.php"
     class="btn btn-primary mb-3"
 >Añadir Colegio</a>
 
@@ -50,5 +50,5 @@ $result = $conn->query($sql);
     }
 </script>
 
-<?php include '../../../../analisis2/public/footer.php'; ?>
+<?php include '../../../../analisis2_notas/public/footer.php'; ?>
 

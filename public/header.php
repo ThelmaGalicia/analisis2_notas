@@ -7,7 +7,7 @@
     <!-- Enlace a Bootstrap 5.0 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">-->
 
-    <link href="../../../../analisis2/assets/vendor/fontawesome-free/css/all.min.css" 
+    <link href="../../../../analisis2_notas/assets/vendor/fontawesome-free/css/all.min.css" 
         rel="stylesheet" 
         type="text/css">
 
@@ -15,8 +15,8 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <link href="../../../../analisis2/assets/css/estilo.css" rel="stylesheet">
-    <link href="../../../../analisis2/assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../../../../analisis2_notas/assets/css/estilo.css" rel="stylesheet">
+    <link href="../../../../analisis2_notas/assets/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body id="page-top">
     <!-- Page Wrapper -->
@@ -159,7 +159,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Thelma</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../../../../analisis2/assets/img/undraw_profile.svg">
+                                    src="../../../../analisis2_notas/assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

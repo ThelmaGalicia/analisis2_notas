@@ -1,6 +1,6 @@
 <?php
-include '../../../../analisis2/includes/db.php';
-include '../../../../analisis2/public/header.php';
+include '../../../../analisis2_notas/includes/db.php';
+include '../../../../analisis2_notas/public/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = $_POST['nombre'];
@@ -33,4 +33,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <a href="index.php" class="btn btn-secondary">Cancelar</a>
 </form>
 
-<?php include '../../../../analisis2/public/footer.php'; ?>
+<?php include '../../../../analisis2_notas/public/footer.php'; ?>

@@ -1,5 +1,5 @@
 <?php
-include '../../../../analisis2/includes/db.php';
+include '../../../../analisis2_notas/includes/db.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
